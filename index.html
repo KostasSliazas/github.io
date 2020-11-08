@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <style>
+    html,
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      background:rgba(0, 0, 0, 0) repeating-linear-gradient(rgb(218, 218, 218) 0px, rgb(218, 218, 218) 3px, rgb(224, 224, 224) 3px, rgb(224, 224, 224) 6px) repeat fixed 0% 0%
+    }
+
+    .wrapcat {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+
+    .meu:before {
+      height: 0;
+      width: 0;
+      position: absolute;
+      content: "";
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 20px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 20px solid #fff;
+      border-bottom: 0px solid transparent;
+    }
+
+    .meu {
+      border-radius: 50%;
+      padding: 12px;
+      background: #fff;
+      opacity: 0;
+      filter: drop-shadow(0 4px 0 #000);
+      animation: meu 1s 15s forwards;
+      margin-top: -50px;
+      left: 20px;
+      bottom: 20px;
+      position: relative;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    .classgrid {
+      display: grid;
+      justify-items: center;
+      align-content: space-evenly;
+      gap: 1px;
+      width: min-content;
+      padding: 1px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      grid-template-columns: repeat(22, 4px);
+      grid-template-rows: repeat(20, 4px);
+    }
+
+    .classgrid i {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .blu {
+      animation: blu 0s 1 steps(1, start) forwards;
+    }
+
+    .gre {
+      animation: gre 0s 1 steps(1, start) forwards;
+    }
+
+    .yel {
+      animation: yel 0s 1 steps(1, start) forwards;
+    }
+
+    .bla {
+      animation: bla 0s 1 steps(1, start) forwards;
+    }
+
+    .red {
+      animation: reds 0s 1 steps(1, start) forwards;
+    }
+
+    .whi {
+      animation: whi 0s 1 steps(1, start) forwards;
+    }
+
+    .lre {
+      animation: lre 0s 1 steps(1, start) forwards;
+    }
+
+    .lye {
+      animation: lye 0s 1 steps(1, start) forwards;
+    }
+
+    @keyframes lye {
+      to {
+        background: #fbfd7b;
+      }
+    }
+
+    @keyframes meu {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes lre {
+      to {
+        background: #af5151;
+      }
+    }
+
+    @keyframes whi {
+      to {
+        background: #eee;
+      }
+    }
+
+    @keyframes reds {
+      to {
+        background: #71452c;
+      }
+    }
+
+    @keyframes bla {
+      to {
+        background: #000;
+      }
+    }
+
+    @keyframes yel {
+      to {
+        background: #ffcb0c;
+      }
+    }
+
+    @keyframes blu {
+      to {
+        background: #00a2eb;
+      }
+    }
+
+    @keyframes gre {
+      to {
+        background: #fe802a;
+      }
+    }
+
+    .s283 {
+      animation-delay: 0.05s;
+    }
+
+    .s306 {
+      animation-delay: 0.10s;
+    }
+
+    .s282 {
+      animation-delay: 0.15s;
+    }
+
+    .s261 {
+      animation-delay: 0.20s;
+    }
+
+    .s262 {
+      animation-delay: 0.25s;
+    }
+
+    .s285 {
+      animation-delay: 0.30s;
+    }
+
+    .s307 {
+      animation-delay: 0.35s;
+    }
+
+    .s329 {
+      animation-delay: 0.40s;
+    }
+
+    .s351 {
+      animation-delay: 0.45s;
+    }
+
+    .s373 {
+      animation-delay: 0.50s;
+    }
+
+    .s394 {
+      animation-delay: 0.55s;
+    }
+
+    .s415 {
+      animation-delay: 0.60s;
+    }
+
+    .s414 {
+      animation-delay: 0.65s;
+    }
+
+    .s413 {
+      animation-delay: 0.70s;
+    }
+
+    .s412 {
+      animation-delay: 0.75s;
+    }
+
+    .s411 {
+      animation-delay: 0.80s;
+    }
+
+    .s410 {
+      animation-delay: 0.85s;
+    }
+
+    .s389 {
+      animation-delay: 0.90s;
+    }
+
+    .s264 {
+      animation-delay: 0.95s;
+    }
+
+    .s286 {
+      animation-delay: 1.00s;
+    }
+
+    .s308 {
+      animation-delay: 1.05s;
+    }
+
+    .s330 {
+      animation-delay: 1.10s;
+    }
+
+    .s352 {
+      animation-delay: 1.15s;
+    }
+
+    .s374 {
+      animation-delay: 1.20s;
+    }
+
+    .s397 {
+      animation-delay: 1.25s;
+    }
+
+    .s398 {
+      animation-delay: 1.30s;
+    }
+
+    .s399 {
+      animation-delay: 1.35s;
+    }
+
+    .s402 {
+      animation-delay: 1.40s;
+    }
+
+    .s403 {
+      animation-delay: 1.45s;
+    }
+
+    .s404 {
+      animation-delay: 1.50s;
+    }
+
+    .s405 {
+      animation-delay: 1.55s;
+    }
+
+    .s406 {
+      animation-delay: 1.60s;
+    }
+
+    .s363 {
+      animation-delay: 1.65s;
+    }
+
+    .s385 {
+      animation-delay: 1.70s;
+    }
+
+    .s407 {
+      animation-delay: 1.75s;
+    }
+
+    .s429 {
+      animation-delay: 1.80s;
+    }
+
+    .s430 {
+      animation-delay: 1.85s;
+    }
+
+    .s431 {
+      animation-delay: 1.90s;
+    }
+
+    .s409 {
+      animation-delay: 1.95s;
+    }
+
+    .s387 {
+      animation-delay: 2.00s;
+    }
+
+    .s365 {
+      animation-delay: 2.05s;
+    }
+
+    .s343 {
+      animation-delay: 2.10s;
+    }
+
+    .s358 {
+      animation-delay: 2.15s;
+    }
+
+    .s380 {
+      animation-delay: 2.20s;
+    }
+
+    .s424 {
+      animation-delay: 2.25s;
+    }
+
+    .s423 {
+      animation-delay: 2.30s;
+    }
+
+    .s422 {
+      animation-delay: 2.35s;
+    }
+
+    .s400 {
+      animation-delay: 2.40s;
+    }
+
+    .s378 {
+      animation-delay: 2.45s;
+    }
+
+    .s356 {
+      animation-delay: 2.50s;
+    }
+
+    .s334 {
+      animation-delay: 2.55s;
+    }
+
+    .s243 {
+      animation-delay: 2.60s;
+    }
+
+    .s221 {
+      animation-delay: 2.65s;
+    }
+
+    .s199 {
+      animation-delay: 2.70s;
+    }
+
+    .s177 {
+      animation-delay: 2.75s;
+    }
+
+    .s368 {
+      animation-delay: 2.80s;
+    }
+
+    .s346 {
+      animation-delay: 2.85s;
+    }
+
+    .s324 {
+      animation-delay: 2.90s;
+    }
+
+    .s302 {
+      animation-delay: 2.95s;
+    }
+
+    .s280 {
+      animation-delay: 3.00s;
+    }
+
+    .s369 {
+      animation-delay: 3.05s;
+    }
+
+    .s370 {
+      animation-delay: 3.10s;
+    }
+
+    .s349 {
+      animation-delay: 3.15s;
+    }
+
+    .s327 {
+      animation-delay: 3.20s;
+    }
+
+    .s305 {
+      animation-delay: 3.25s;
+    }
+
+    .s257 {
+      animation-delay: 3.30s;
+    }
+
+    .s235 {
+      animation-delay: 3.35s;
+    }
+
+    .s213 {
+      animation-delay: 3.40s;
+    }
+
+    .s191 {
+      animation-delay: 3.45s;
+    }
+
+    .s168 {
+      animation-delay: 3.50s;
+    }
+
+    .s146 {
+      animation-delay: 3.55s;
+    }
+
+    .s124 {
+      animation-delay: 3.60s;
+    }
+
+    .s156 {
+      animation-delay: 3.65s;
+    }
+
+    .s134 {
+      animation-delay: 3.70s;
+    }
+
+    .s112 {
+      animation-delay: 3.75s;
+    }
+
+    .s91 {
+      animation-delay: 3.80s;
+    }
+
+    .s69 {
+      animation-delay: 3.85s;
+    }
+
+    .s101 {
+      animation-delay: 3.90s;
+    }
+
+    .s79 {
+      animation-delay: 3.95s;
+    }
+
+    .s56 {
+      animation-delay: 4.00s;
+    }
+
+    .s34 {
+      animation-delay: 4.05s;
+    }
+
+    .s48 {
+      animation-delay: 4.10s;
+    }
+
+    .s26 {
+      animation-delay: 4.15s;
+    }
+
+    .s5 {
+      animation-delay: 4.20s;
+    }
+
+    .s28 {
+      animation-delay: 4.25s;
+    }
+
+    .s51 {
+      animation-delay: 4.30s;
+    }
+
+    .s52 {
+      animation-delay: 4.35s;
+    }
+
+    .s53 {
+      animation-delay: 4.40s;
+    }
+
+    .s32 {
+      animation-delay: 4.45s;
+    }
+
+    .s11 {
+      animation-delay: 4.50s;
+    }
+
+    .s140 {
+      animation-delay: 4.55s;
+    }
+
+    .s161 {
+      animation-delay: 4.60s;
+    }
+
+    .s163 {
+      animation-delay: 4.65s;
+    }
+
+    .s120 {
+      animation-delay: 4.70s;
+    }
+
+    .s116 {
+      animation-delay: 4.75s;
+    }
+
+    .s165 {
+      animation-delay: 4.80s;
+    }
+
+    .s159 {
+      animation-delay: 4.85s;
+    }
+
+    .s27 {
+      animation-delay: 4.90s;
+    }
+
+    .s49 {
+      animation-delay: 4.95s;
+    }
+
+    .s50 {
+      animation-delay: 5.00s;
+    }
+
+    .s54 {
+      animation-delay: 5.05s;
+    }
+
+    .s55 {
+      animation-delay: 5.10s;
+    }
+
+    .s33 {
+      animation-delay: 5.15s;
+    }
+
+    .s70 {
+      animation-delay: 5.20s;
+    }
+
+    .s71 {
+      animation-delay: 5.25s;
+    }
+
+    .s72 {
+      animation-delay: 5.30s;
+    }
+
+    .s73 {
+      animation-delay: 5.35s;
+    }
+
+    .s74 {
+      animation-delay: 5.40s;
+    }
+
+    .s75 {
+      animation-delay: 5.45s;
+    }
+
+    .s76 {
+      animation-delay: 5.50s;
+    }
+
+    .s77 {
+      animation-delay: 5.55s;
+    }
+
+    .s78 {
+      animation-delay: 5.60s;
+    }
+
+    .s92 {
+      animation-delay: 5.65s;
+    }
+
+    .s93 {
+      animation-delay: 5.70s;
+    }
+
+    .s94 {
+      animation-delay: 5.75s;
+    }
+
+    .s95 {
+      animation-delay: 5.80s;
+    }
+
+    .s96 {
+      animation-delay: 5.85s;
+    }
+
+    .s97 {
+      animation-delay: 5.90s;
+    }
+
+    .s98 {
+      animation-delay: 5.95s;
+    }
+
+    .s99 {
+      animation-delay: 6.00s;
+    }
+
+    .s100 {
+      animation-delay: 6.05s;
+    }
+
+    .s113 {
+      animation-delay: 6.10s;
+    }
+
+    .s114 {
+      animation-delay: 6.15s;
+    }
+
+    .s115 {
+      animation-delay: 6.20s;
+    }
+
+    .s117 {
+      animation-delay: 6.25s;
+    }
+
+    .s118 {
+      animation-delay: 6.30s;
+    }
+
+    .s119 {
+      animation-delay: 6.35s;
+    }
+
+    .s121 {
+      animation-delay: 6.40s;
+    }
+
+    .s122 {
+      animation-delay: 6.45s;
+    }
+
+    .s123 {
+      animation-delay: 6.50s;
+    }
+
+    .s135 {
+      animation-delay: 6.55s;
+    }
+
+    .s136 {
+      animation-delay: 6.60s;
+    }
+
+    .s137 {
+      animation-delay: 6.65s;
+    }
+
+    .s138 {
+      animation-delay: 6.70s;
+    }
+
+    .s139 {
+      animation-delay: 6.75s;
+    }
+
+    .s141 {
+      animation-delay: 6.80s;
+    }
+
+    .s142 {
+      animation-delay: 6.85s;
+    }
+
+    .s143 {
+      animation-delay: 6.90s;
+    }
+
+    .s144 {
+      animation-delay: 6.95s;
+    }
+
+    .s145 {
+      animation-delay: 7.00s;
+    }
+
+    .s157 {
+      animation-delay: 7.05s;
+    }
+
+    .s158 {
+      animation-delay: 7.10s;
+    }
+
+    .s160 {
+      animation-delay: 7.15s;
+    }
+
+    .s162 {
+      animation-delay: 7.20s;
+    }
+
+    .s164 {
+      animation-delay: 7.25s;
+    }
+
+    .s166 {
+      animation-delay: 7.30s;
+    }
+
+    .s167 {
+      animation-delay: 7.35s;
+    }
+
+    .s178 {
+      animation-delay: 7.40s;
+    }
+
+    .s179 {
+      animation-delay: 7.45s;
+    }
+
+    .s180 {
+      animation-delay: 7.50s;
+    }
+
+    .s181 {
+      animation-delay: 7.55s;
+    }
+
+    .s182 {
+      animation-delay: 7.60s;
+    }
+
+    .s183 {
+      animation-delay: 7.65s;
+    }
+
+    .s184 {
+      animation-delay: 7.70s;
+    }
+
+    .s185 {
+      animation-delay: 7.75s;
+    }
+
+    .s186 {
+      animation-delay: 7.80s;
+    }
+
+    .s187 {
+      animation-delay: 7.85s;
+    }
+
+    .s188 {
+      animation-delay: 7.90s;
+    }
+
+    .s189 {
+      animation-delay: 7.95s;
+    }
+
+    .s190 {
+      animation-delay: 8.00s;
+    }
+
+    .s200 {
+      animation-delay: 8.05s;
+    }
+
+    .s201 {
+      animation-delay: 8.10s;
+    }
+
+    .s202 {
+      animation-delay: 8.15s;
+    }
+
+    .s203 {
+      animation-delay: 8.20s;
+    }
+
+    .s204 {
+      animation-delay: 8.25s;
+    }
+
+    .s205 {
+      animation-delay: 8.30s;
+    }
+
+    .s206 {
+      animation-delay: 8.35s;
+    }
+
+    .s207 {
+      animation-delay: 8.40s;
+    }
+
+    .s208 {
+      animation-delay: 8.45s;
+    }
+
+    .s209 {
+      animation-delay: 8.50s;
+    }
+
+    .s210 {
+      animation-delay: 8.55s;
+    }
+
+    .s211 {
+      animation-delay: 8.60s;
+    }
+
+    .s212 {
+      animation-delay: 8.65s;
+    }
+
+    .s222 {
+      animation-delay: 8.70s;
+    }
+
+    .s223 {
+      animation-delay: 8.75s;
+    }
+
+    .s224 {
+      animation-delay: 8.80s;
+    }
+
+    .s225 {
+      animation-delay: 8.85s;
+    }
+
+    .s226 {
+      animation-delay: 8.90s;
+    }
+
+    .s227 {
+      animation-delay: 8.95s;
+    }
+
+    .s228 {
+      animation-delay: 9.00s;
+    }
+
+    .s229 {
+      animation-delay: 9.05s;
+    }
+
+    .s230 {
+      animation-delay: 9.10s;
+    }
+
+    .s231 {
+      animation-delay: 9.15s;
+    }
+
+    .s232 {
+      animation-delay: 9.20s;
+    }
+
+    .s233 {
+      animation-delay: 9.25s;
+    }
+
+    .s234 {
+      animation-delay: 9.30s;
+    }
+
+    .s244 {
+      animation-delay: 9.35s;
+    }
+
+    .s245 {
+      animation-delay: 9.40s;
+    }
+
+    .s246 {
+      animation-delay: 9.45s;
+    }
+
+    .s247 {
+      animation-delay: 9.50s;
+    }
+
+    .s248 {
+      animation-delay: 9.55s;
+    }
+
+    .s249 {
+      animation-delay: 9.60s;
+    }
+
+    .s250 {
+      animation-delay: 9.65s;
+    }
+
+    .s251 {
+      animation-delay: 9.70s;
+    }
+
+    .s252 {
+      animation-delay: 9.75s;
+    }
+
+    .s253 {
+      animation-delay: 9.80s;
+    }
+
+    .s254 {
+      animation-delay: 9.85s;
+    }
+
+    .s255 {
+      animation-delay: 9.90s;
+    }
+
+    .s256 {
+      animation-delay: 9.95s;
+    }
+
+    .s265 {
+      animation-delay: 10.00s;
+    }
+
+    .s266 {
+      animation-delay: 10.05s;
+    }
+
+    .s267 {
+      animation-delay: 10.10s;
+    }
+
+    .s268 {
+      animation-delay: 10.15s;
+    }
+
+    .s269 {
+      animation-delay: 10.20s;
+    }
+
+    .s270 {
+      animation-delay: 10.25s;
+    }
+
+    .s271 {
+      animation-delay: 10.30s;
+    }
+
+    .s272 {
+      animation-delay: 10.35s;
+    }
+
+    .s273 {
+      animation-delay: 10.40s;
+    }
+
+    .s274 {
+      animation-delay: 10.45s;
+    }
+
+    .s275 {
+      animation-delay: 10.50s;
+    }
+
+    .s276 {
+      animation-delay: 10.55s;
+    }
+
+    .s277 {
+      animation-delay: 10.60s;
+    }
+
+    .s278 {
+      animation-delay: 10.65s;
+    }
+
+    .s279 {
+      animation-delay: 10.70s;
+    }
+
+    .s287 {
+      animation-delay: 10.75s;
+    }
+
+    .s288 {
+      animation-delay: 10.80s;
+    }
+
+    .s289 {
+      animation-delay: 10.85s;
+    }
+
+    .s290 {
+      animation-delay: 10.90s;
+    }
+
+    .s291 {
+      animation-delay: 10.95s;
+    }
+
+    .s293 {
+      animation-delay: 11.00s;
+    }
+
+    .s292 {
+      animation-delay: 11.05s;
+    }
+
+    .s294 {
+      animation-delay: 11.10s;
+    }
+
+    .s295 {
+      animation-delay: 11.15s;
+    }
+
+    .s296 {
+      animation-delay: 11.20s;
+    }
+
+    .s297 {
+      animation-delay: 11.25s;
+    }
+
+    .s298 {
+      animation-delay: 11.30s;
+    }
+
+    .s299 {
+      animation-delay: 11.35s;
+    }
+
+    .s300 {
+      animation-delay: 11.40s;
+    }
+
+    .s301 {
+      animation-delay: 11.45s;
+    }
+
+    .s283 {
+      animation-delay: 11.50s;
+    }
+
+    .s284 {
+      animation-delay: 11.55s;
+    }
+
+    .s306 {
+      animation-delay: 11.60s;
+    }
+
+    .s328 {
+      animation-delay: 11.65s;
+    }
+
+    .s350 {
+      animation-delay: 11.70s;
+    }
+
+    .s372 {
+      animation-delay: 11.75s;
+    }
+
+    .s371 {
+      animation-delay: 11.80s;
+    }
+
+    .s393 {
+      animation-delay: 11.85s;
+    }
+
+    .s392 {
+      animation-delay: 11.90s;
+    }
+
+    .s391 {
+      animation-delay: 11.95s;
+    }
+
+    .s390 {
+      animation-delay: 12.00s;
+    }
+
+    .s388 {
+      animation-delay: 12.05s;
+    }
+
+    .s366 {
+      animation-delay: 12.10s;
+    }
+
+    .s345 {
+      animation-delay: 12.15s;
+    }
+
+    .s344 {
+      animation-delay: 12.20s;
+    }
+
+    .s322 {
+      animation-delay: 12.25s;
+    }
+
+    .s323 {
+      animation-delay: 12.30s;
+    }
+
+    .s367 {
+      animation-delay: 12.35s;
+    }
+
+    .s408 {
+      animation-delay: 12.40s;
+    }
+
+    .s386 {
+      animation-delay: 12.45s;
+    }
+
+    .s364 {
+      animation-delay: 12.50s;
+    }
+
+    .s342 {
+      animation-delay: 12.55s;
+    }
+
+    .s320 {
+      animation-delay: 12.60s;
+    }
+
+    .s321 {
+      animation-delay: 12.65s;
+    }
+
+    .s376 {
+      animation-delay: 12.70s;
+    }
+
+    .s377 {
+      animation-delay: 12.75s;
+    }
+
+    .s375 {
+      animation-delay: 12.80s;
+    }
+
+    .s353 {
+      animation-delay: 12.85s;
+    }
+
+    .s331 {
+      animation-delay: 12.90s;
+    }
+
+    .s309 {
+      animation-delay: 12.95s;
+    }
+
+    .s354 {
+      animation-delay: 13.00s;
+    }
+
+    .s332 {
+      animation-delay: 13.05s;
+    }
+
+    .s310 {
+      animation-delay: 13.10s;
+    }
+
+    .s355 {
+      animation-delay: 13.15s;
+    }
+
+    .s333 {
+      animation-delay: 13.20s;
+    }
+
+    .s311 {
+      animation-delay: 13.25s;
+    }
+
+    .s312 {
+      animation-delay: 13.30s;
+    }
+
+    .s313 {
+      animation-delay: 13.35s;
+    }
+
+    .s335 {
+      animation-delay: 13.40s;
+    }
+
+    .s357 {
+      animation-delay: 13.45s;
+    }
+
+    .s379 {
+      animation-delay: 13.50s;
+    }
+
+    .s401 {
+      animation-delay: 13.55s;
+    }
+
+    .s314 {
+      animation-delay: 13.60s;
+    }
+
+    .s315 {
+      animation-delay: 13.65s;
+    }
+
+    .s316 {
+      animation-delay: 13.70s;
+    }
+
+    .s317 {
+      animation-delay: 13.75s;
+    }
+
+    .s318 {
+      animation-delay: 13.80s;
+    }
+
+    .s319 {
+      animation-delay: 13.85s;
+    }
+
+    .s336 {
+      animation-delay: 13.90s;
+    }
+
+    .s337 {
+      animation-delay: 13.95s;
+    }
+
+    .s338 {
+      animation-delay: 14.00s;
+    }
+
+    .s339 {
+      animation-delay: 14.05s;
+    }
+
+    .s340 {
+      animation-delay: 14.10s;
+    }
+
+    .s341 {
+      animation-delay: 14.15s;
+    }
+
+    .s359 {
+      animation-delay: 14.20s;
+    }
+
+    .s361 {
+      animation-delay: 14.25s;
+    }
+
+    .s360 {
+      animation-delay: 14.30s;
+    }
+
+    .s362 {
+      animation-delay: 14.35s;
+    }
+
+    .s384 {
+      animation-delay: 14.40s;
+    }
+
+    .s383 {
+      animation-delay: 14.45s;
+    }
+
+    .s382 {
+      animation-delay: 14.50s;
+    }
+
+    .s381 {
+      animation-delay: 14.55s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapcat">
+    <div class="meu">Hello, my name Kostas</div>
+    <div class="classgrid"><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s5 bla"></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s11 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s26 bla"></i><i class="sel s27 whi"></i><i class="sel s28 bla"></i><i></i><i></i><i></i><i
+        class="sel s32 bla"></i><i class="sel s33 whi"></i><i
+        class="sel s34 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s48 bla"></i><i class="sel s49 whi"></i><i class="sel s50 whi"></i><i class="sel s51 bla"></i><i
+        class="sel s52 bla"></i><i class="sel s53 bla"></i><i class="sel s54 whi"></i><i class="sel s55 whi"></i><i
+        class="sel s56 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s69 bla"></i><i class="sel s70 whi"></i><i class="sel s71 whi"></i><i class="sel s72 whi"></i><i
+        class="sel s73 whi"></i><i class="sel s74 whi"></i><i class="sel s75 whi"></i><i class="sel s76 whi"></i><i
+        class="sel s77 whi"></i><i class="sel s78 whi"></i><i
+        class="sel s79 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s91 bla"></i><i class="sel s92 whi"></i><i class="sel s93 whi"></i><i class="sel s94 whi"></i><i
+        class="sel s95 whi"></i><i class="sel s96 whi"></i><i class="sel s97 whi"></i><i class="sel s98 whi"></i><i
+        class="sel s99 whi"></i><i class="sel s100 whi"></i><i
+        class="sel s101 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s112 bla"></i><i class="sel s113 whi"></i><i class="sel s114 whi"></i><i class="sel s115 whi"></i><i
+        class="sel s116 bla"></i><i class="sel s117 whi"></i><i class="sel s118 whi"></i><i class="sel s119 whi"></i><i
+        class="sel s120 bla"></i><i class="sel s121 whi"></i><i class="sel s122 whi"></i><i class="sel s123 whi"></i><i
+        class="sel s124 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s134 bla"></i><i class="sel s135 whi"></i><i class="sel s136 whi"></i><i class="sel s137 whi"></i><i
+        class="sel s138 whi"></i><i class="sel s139 whi"></i><i class="sel s140 bla"></i><i class="sel s141 whi"></i><i
+        class="sel s142 whi"></i><i class="sel s143 whi"></i><i class="sel s144 whi"></i><i class="sel s145 whi"></i><i
+        class="sel s146 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s156 bla"></i><i class="sel s157 whi"></i><i class="sel s158 whi"></i><i class="sel s159 red"></i><i
+        class="sel s160 whi"></i><i class="sel s161 bla"></i><i class="sel s162 whi"></i><i class="sel s163 bla"></i><i
+        class="sel s164 whi"></i><i class="sel s165 red"></i><i class="sel s166 whi"></i><i class="sel s167 whi"></i><i
+        class="sel s168 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="sel s177 bla"></i><i
+        class="sel s178 whi"></i><i class="sel s179 whi"></i><i class="sel s180 whi"></i><i class="sel s181 whi"></i><i
+        class="sel s182 whi"></i><i class="sel s183 whi"></i><i class="sel s184 whi"></i><i class="sel s185 whi"></i><i
+        class="sel s186 whi"></i><i class="sel s187 whi"></i><i class="sel s188 whi"></i><i class="sel s189 whi"></i><i
+        class="sel s190 whi"></i><i class="sel s191 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s199 bla"></i><i class="sel s200 whi"></i><i class="sel s201 whi"></i><i class="sel s202 whi"></i><i
+        class="sel s203 whi"></i><i class="sel s204 whi"></i><i class="sel s205 whi"></i><i class="sel s206 whi"></i><i
+        class="sel s207 whi"></i><i class="sel s208 whi"></i><i class="sel s209 whi"></i><i class="sel s210 whi"></i><i
+        class="sel s211 whi"></i><i class="sel s212 whi"></i><i
+        class="sel s213 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="sel s221 bla"></i><i
+        class="sel s222 whi"></i><i class="sel s223 whi"></i><i class="sel s224 whi"></i><i class="sel s225 whi"></i><i
+        class="sel s226 whi"></i><i class="sel s227 whi"></i><i class="sel s228 whi"></i><i class="sel s229 whi"></i><i
+        class="sel s230 whi"></i><i class="sel s231 whi"></i><i class="sel s232 whi"></i><i class="sel s233 whi"></i><i
+        class="sel s234 whi"></i><i class="sel s235 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i
+        class="sel s243 bla"></i><i class="sel s244 whi"></i><i class="sel s245 whi"></i><i class="sel s246 whi"></i><i
+        class="sel s247 whi"></i><i class="sel s248 whi"></i><i class="sel s249 whi"></i><i class="sel s250 whi"></i><i
+        class="sel s251 whi"></i><i class="sel s252 whi"></i><i class="sel s253 whi"></i><i class="sel s254 whi"></i><i
+        class="sel s255 whi"></i><i class="sel s256 whi"></i><i class="sel s257 bla"></i><i></i><i></i><i></i><i
+        class="sel s261 bla"></i><i class="sel s262 bla"></i><i></i><i class="sel s264 bla"></i><i
+        class="sel s265 whi"></i><i class="sel s266 whi"></i><i class="sel s267 whi"></i><i class="sel s268 whi"></i><i
+        class="sel s269 whi"></i><i class="sel s270 whi"></i><i class="sel s271 whi"></i><i class="sel s272 whi"></i><i
+        class="sel s273 whi"></i><i class="sel s274 whi"></i><i class="sel s275 whi"></i><i class="sel s276 whi"></i><i
+        class="sel s277 whi"></i><i class="sel s278 whi"></i><i class="sel s279 whi"></i><i
+        class="sel s280 bla"></i><i></i><i class="sel s282 bla"></i><i class="sel s283 whi"></i><i
+        class="sel s284 whi"></i><i class="sel s285 bla"></i><i class="sel s286 bla"></i><i class="sel s287 whi"></i><i
+        class="sel s288 whi"></i><i class="sel s289 whi"></i><i class="sel s290 whi"></i><i class="sel s291 whi"></i><i
+        class="sel s292 whi"></i><i class="sel s293 whi"></i><i class="sel s294 whi"></i><i class="sel s295 whi"></i><i
+        class="sel s296 whi"></i><i class="sel s297 whi"></i><i class="sel s298 whi"></i><i class="sel s299 whi"></i><i
+        class="sel s300 whi"></i><i class="sel s301 whi"></i><i class="sel s302 bla"></i><i></i><i></i><i
+        class="sel s305 bla"></i><i class="sel s306 whi"></i><i class="sel s307 bla"></i><i class="sel s308 bla"></i><i
+        class="sel s309 whi"></i><i class="sel s310 whi"></i><i class="sel s311 whi"></i><i class="sel s312 whi"></i><i
+        class="sel s313 whi"></i><i class="sel s314 whi"></i><i class="sel s315 whi"></i><i class="sel s316 whi"></i><i
+        class="sel s317 whi"></i><i class="sel s318 whi"></i><i class="sel s319 whi"></i><i class="sel s320 whi"></i><i
+        class="sel s321 whi"></i><i class="sel s322 whi"></i><i class="sel s323 whi"></i><i
+        class="sel s324 bla"></i><i></i><i></i><i class="sel s327 bla"></i><i class="sel s328 whi"></i><i
+        class="sel s329 bla"></i><i class="sel s330 bla"></i><i class="sel s331 whi"></i><i class="sel s332 whi"></i><i
+        class="sel s333 whi"></i><i class="sel s334 bla"></i><i class="sel s335 whi"></i><i class="sel s336 whi"></i><i
+        class="sel s337 whi"></i><i class="sel s338 whi"></i><i class="sel s339 whi"></i><i class="sel s340 whi"></i><i
+        class="sel s341 whi"></i><i class="sel s342 whi"></i><i class="sel s343 bla"></i><i class="sel s344 whi"></i><i
+        class="sel s345 whi"></i><i class="sel s346 bla"></i><i></i><i></i><i class="sel s349 bla"></i><i
+        class="sel s350 whi"></i><i class="sel s351 bla"></i><i class="sel s352 bla"></i><i class="sel s353 whi"></i><i
+        class="sel s354 whi"></i><i class="sel s355 whi"></i><i class="sel s356 bla"></i><i class="sel s357 whi"></i><i
+        class="sel s358 bla"></i><i class="sel s359 whi"></i><i class="sel s360 whi"></i><i class="sel s361 whi"></i><i
+        class="sel s362 whi"></i><i class="sel s363 bla"></i><i class="sel s364 whi"></i><i class="sel s365 bla"></i><i
+        class="sel s366 whi"></i><i class="sel s367 whi"></i><i class="sel s368 bla"></i><i class="sel s369 bla"></i><i
+        class="sel s370 bla"></i><i class="sel s371 whi"></i><i class="sel s372 whi"></i><i class="sel s373 bla"></i><i
+        class="sel s374 bla"></i><i class="sel s375 whi"></i><i class="sel s376 whi"></i><i class="sel s377 whi"></i><i
+        class="sel s378 bla"></i><i class="sel s379 whi"></i><i class="sel s380 bla"></i><i class="sel s381 whi"></i><i
+        class="sel s382 whi"></i><i class="sel s383 whi"></i><i class="sel s384 whi"></i><i class="sel s385 bla"></i><i
+        class="sel s386 whi"></i><i class="sel s387 bla"></i><i class="sel s388 whi"></i><i class="sel s389 bla"></i><i
+        class="sel s390 whi"></i><i class="sel s391 whi"></i><i class="sel s392 whi"></i><i class="sel s393 whi"></i><i
+        class="sel s394 bla"></i><i></i><i></i><i class="sel s397 bla"></i><i class="sel s398 bla"></i><i
+        class="sel s399 bla"></i><i class="sel s400 bla"></i><i class="sel s401 whi"></i><i class="sel s402 bla"></i><i
+        class="sel s403 bla"></i><i class="sel s404 bla"></i><i class="sel s405 bla"></i><i class="sel s406 bla"></i><i
+        class="sel s407 bla"></i><i class="sel s408 whi"></i><i class="sel s409 bla"></i><i class="sel s410 bla"></i><i
+        class="sel s411 bla"></i><i class="sel s412 bla"></i><i class="sel s413 bla"></i><i class="sel s414 bla"></i><i
+        class="sel s415 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="sel s422 bla"></i><i
+        class="sel s423 bla"></i><i class="sel s424 bla"></i><i></i><i></i><i></i><i></i><i class="sel s429 bla"></i><i
+        class="sel s430 bla"></i><i class="sel s431 bla"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <a href="http://kostassliazas.github.io/landing.github.io/">This is my home page</a>
+  </div>
+</body>
+
+</html>
